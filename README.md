@@ -1,6 +1,7 @@
 #                feature detection and matching algorithm models
 
-
+## Additional Information
+This fork adds a tensorrt conversion script, slight modification to superpoint/superglue models to work with the converted engine models. See `How to Run` section on how to use the script.
 
 ## Introduction		
 
@@ -26,8 +27,19 @@ CUDNN>=8.02
 
 TensorRT>=7.2.3
 
+### Python 3 Dependencies
+
+Install the following packages to use the conversion script:
+
+polygraphy
+
 ## How to Run
 
+### Tensorrt Conversion
+1. Execute both `convert/superpoint_convert.py` and `convert/superglue_convert.py`.
+2. Once converted, the resulting models will be inside the `convert/weights` directory named `superpoint_v1.engine` and `superglue_indoor.engine`. Move these files inside the `engines` folder.
+
+### Compilation and Execution
 1. build.
 
 ```
@@ -66,27 +78,9 @@ traditional algorithms.
 ./IR --traditional  --image-pair xx01.jpg xx02.jpg
 ```
 
-## Models TRT
-https://pan.baidu.com/s/1CoK_KuC42BFD-mtO-BBhHg 
-Code：cb7x 
-
-## TODO
-
-- [ ]  Optimizing post-processing using custom TensorRT layer or Cublass.
-- [ ]  Model conversion script.
-- [ ]  support for FP16/INT8.
-
-## Discussion
-
-WeChat ID: sigma1573
-
-Welcome to *add* WeChat(note: unit + name) and join the group discussion！
-
-For more details, please refer to zhihu: https://zhuanlan.zhihu.com/p/518877309
-
 ## SuperPoint
 
-Superpoint pretrained models are from [magicleap/SuperPointPretrainedNetwork.](https://github.com/magicleap/SuperPointPretrainedNetwork)
+Superpoint pretrained models are from [magicleap/SuperGluePretrainedNetwork.](https://github.com/magicleap/SuperGluePretrainedNetwork)
 
 ## SuperGlue
 

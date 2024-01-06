@@ -100,7 +100,7 @@ int main(int argc, char **argv)
 				char key = cv::waitKey(1);
 				if (key=='n') vdi[0].srcimg1.copyTo(vdi[0].srcimg0);
 				if (key == 'q') break;
-				if (argv2 == "--image-pair") break;
+				// if (argv2 == "--image-pair") break;
 			}
 
 		}

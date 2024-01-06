@@ -236,8 +236,8 @@ public:
     //! Note samples should not be calling this function directly; it will eventually go away once we eliminate the
     //! inheritance from nvinfer1::ILogger
     //!
-    //! ¸Ãº¯ÊýÊ¹ÓÃoverride ±¨´í£º"override"£ºÖØÐ´Ðéº¯ÊýµÄÏÞÖÆÐÔÒì³£¹æ·¶±È»ùÀàÐé³ÉÔ±º¯Êý "base" ÉÙ
-    //! Òò´Ë½«override¸ü¸ÄÎªnoexcept, C++ 11ÐÂÌØÐÔ ÓÃ²Ù×÷·ûnoexceptÌæ´úÔ­ÏÈµÄthrow
+    //! ï¿½Ãºï¿½ï¿½ï¿½Ê¹ï¿½ï¿½override ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"override"ï¿½ï¿½ï¿½ï¿½Ð´ï¿½éº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½æ·¶ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ "base" ï¿½ï¿½
+    //! ï¿½ï¿½Ë½ï¿½overrideï¿½ï¿½ï¿½ï¿½Îªnoexcept, C++ 11ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½noexceptï¿½ï¿½ï¿½Ô­ï¿½Èµï¿½throw
     //! void log(Severity severity, const char* msg) override  
     //!  {
     //!     LogStreamConsumer(mReportableSeverity, severity) << "[TRT] " << std::string(msg) << std::endl;

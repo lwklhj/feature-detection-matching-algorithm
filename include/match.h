@@ -6,7 +6,10 @@
 
 #ifndef _MATCH_H_
 #define _MATCH_H_
-#include"local_match.h"
+// DL
+#include "SuperGlue.h"
+#include "SuperPoint.h"
+// Traditional
 #include"akaze_match.h"
 //#include"surf_match.h"
 #include"tools.h"
@@ -34,8 +37,8 @@ public:
 
 
 private:
-	point_lm_trt * _plt;
-	match_lm_trt * _mlt;
+	SuperPoint * _plt;
+	SuperGlue * _mlt;
 
 };
 

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.15)
 project(IR)
 add_definitions(-std=c++11)
 
@@ -12,20 +12,22 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # cuda
 find_package(CUDA REQUIRED)
-include_directories(/usr/local/cuda-10.2/include)
-link_directories(/usr/local/cuda-10.2/lib64)
+include_directories(/usr/local/cuda/include)
+link_directories(/usr/local/cuda/lib64)
 
 # tensorrt
-include_directories(/usr/local/TensorRT-7.2.2.3/include)
-link_directories(/usr/local/TensorRT-7.2.2.3/lib)
+include_directories(/usr/include/x86_64-linux-gnu)
+link_directories(/usr/lib/x86_64-linux-gnu)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED")
+add_definitions(-w)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED -g")
 
 find_package(OpenCV)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 set(SRC
-src/local_match.cpp
+src/SuperGlue.cpp
+src/SuperPoint.cpp
 src/akaze_match.cpp
 src/match.cpp
 src/example.cpp
